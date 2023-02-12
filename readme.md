@@ -3,7 +3,7 @@
 This repository contains the refactored MtMs model used in the prediction part of the M6 forecasting competition.
 All core functions can be found in the folder `src/MtMs`. 
 File `src/main.R` contains a demonstration of how the MtMs model can be used in practice.
-For more details about the model, please read the accompanying PDF.
+For more details about the model, please read the accompanying [PDF](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4355794 "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4355794").
 
 To illustrate how it could be used to solve meta-learning and multi-task problems, we apply it to the sinusoidal regression task, which is commonly used to benchmark different meta-learning approaches.
 To replicate this demonstration:
