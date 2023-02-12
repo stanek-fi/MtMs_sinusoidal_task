@@ -1,0 +1,18 @@
+stages:
+  main:
+    cmd: Rscript src/main.R
+    deps:
+      - src/main.R
+      - src/MtMs
+      - src/helpers
+    params:
+      - par.yaml:
+    metrics:
+      - outputs/metrics/metrics.yaml:
+          cache: false
+    plots:
+      - outputs/metrics/metrics.csv:
+            template: bar_horizontal
+            x: value
+            y: var
+            cache: false

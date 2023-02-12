@@ -1,0 +1,7 @@
+yaml
+data.table
+ggplot2
+stringr
+torch
+latex2exp
+cowplot

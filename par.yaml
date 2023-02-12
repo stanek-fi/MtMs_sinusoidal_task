@@ -1,0 +1,26 @@
+# -- general -------------------------------------------------------------------
+seed: 1
+M_in: 1000
+M_out: 600
+K_train: 5
+K_test: 5
+# K_train: 10
+# K_test: 10
+K_validation: 100
+
+# -- base_model -------------------------------------------------------------------
+base_epochs: 100
+base_minibatch: 100
+base_lr: 0.001
+
+# -- mtms -------------------------------------------------------------------
+mesa_parameter_size: 2
+meta_bias: True
+meta_dropout_p: 0
+mtms_epochs: 100
+mtms_minibatch: 10
+mtms_lr: 0.001
+
+# -- mesa_model -------------------------------------------------------------------
+mesa_epochs: 100
+mesa_lr: 1
