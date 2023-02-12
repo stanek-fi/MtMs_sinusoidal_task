@@ -2,10 +2,10 @@
 seed: 1
 M_in: 1000
 M_out: 600
-K_train: 5
-K_test: 5
-# K_train: 10
-# K_test: 10
+# K_train: 5
+# K_test: 5
+K_train: 10
+K_test: 10
 K_validation: 100
 
 # -- base_model -------------------------------------------------------------------

@@ -1,0 +1,11 @@
+loss_base_model:
+  train: 3.0158393
+  test: 3.0405912
+  validation: 3.0100594
+loss_mtms:
+  train: 0.0165586
+  test: 0.0189737
+  validation: 0.0184179
+loss_mesa_model:
+  validation: 0.0135631
+  validation_int: 0.0012424

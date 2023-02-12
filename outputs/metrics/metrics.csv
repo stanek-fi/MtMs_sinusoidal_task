@@ -1,0 +1,9 @@
+"var","value"
+"loss_base_model.train",3.01583933830261
+"loss_base_model.test",3.0405912399292
+"loss_base_model.validation",3.01005935668945
+"loss_mtms.train",0.0165586154907942
+"loss_mtms.test",0.0189736969769001
+"loss_mtms.validation",0.0184178873896599
+"loss_mesa_model.validation",0.0135630556302688
+"loss_mesa_model.validation_int",0.00124241575847287

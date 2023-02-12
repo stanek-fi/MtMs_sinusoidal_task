@@ -1,0 +1,42 @@
+schema: '2.0'
+stages:
+  main:
+    cmd: Rscript src/main.R
+    deps:
+    - path: src/MtMs
+      md5: 58cb044f19ab853c5f718fd120e1a0ff.dir
+      size: 11501
+      nfiles: 4
+    - path: src/helpers
+      md5: 9b79f9df90a7dedf2858f7f289803d5d.dir
+      size: 8103
+      nfiles: 4
+    - path: src/main.R
+      md5: 4c36d29fd3d80f4c24c9899a6981f756
+      size: 7650
+    params:
+      par.yaml:
+        K_test: 10
+        K_train: 10
+        K_validation: 100
+        M_in: 1000
+        M_out: 600
+        base_epochs: 100
+        base_lr: 0.001
+        base_minibatch: 100
+        mesa_epochs: 100
+        mesa_lr: 1
+        mesa_parameter_size: 2
+        meta_bias: true
+        meta_dropout_p: 0
+        mtms_epochs: 100
+        mtms_lr: 0.001
+        mtms_minibatch: 10
+        seed: 1
+    outs:
+    - path: outputs/metrics/metrics.csv
+      md5: ad7a2bb7bfab62cf803996a64d9cd067
+      size: 365
+    - path: outputs/metrics/metrics.yaml
+      md5: e1987b71b74f28582a99b1f0b90b059f
+      size: 230
