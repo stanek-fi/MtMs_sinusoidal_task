@@ -124,15 +124,15 @@ for (m in seq_len(par$M_out)) {
         print(str_c("m: ", m, " Time:", Sys.time()))
     }
 
-    rows_train <- torch_squeeze(train_out$task == m)
-    rows_validation <- torch_squeeze(validation_out$task == m)
-    train_out <- list(
-        y = train_out$y[rows_train],
-        x = train_out$x[rows_train]
+    rows_train_m <- torch_squeeze(train_out$task == m)
+    rows_validation_m <- torch_squeeze(validation_out$task == m)
+    train_out_m <- list(
+        y = train_out$y[rows_train_m],
+        x = train_out$x[rows_train_m]
     )
-    validation_out <- list(
-        y = validation_out$y[rows_validation],
-        x = validation_out$x[rows_validation]
+    validation_out_m <- list(
+        y = validation_out$y[rows_validation_m],
+        x = validation_out$x[rows_validation_m]
     )
 
     mesa_model <- mtms$MesaModel(mtms)()
@@ -140,7 +140,7 @@ for (m in seq_len(par$M_out)) {
     fit <- train_model(
         model = mesa_model,
         criterion = criterion,
-        train = train_out,
+        train = train_out_m,
         epochs = par$mesa_epochs,
         lr = par$mesa_lr,
         optimizer_type = "adadelta",
@@ -148,7 +148,7 @@ for (m in seq_len(par$M_out)) {
     )
 
     mesa_model <- fit$model
-    losses_mesa[m] <- as.array(criterion(mesa_model(validation_out$x), validation_out$y))
+    losses_mesa[m] <- as.array(criterion(mesa_model(validation_out_m$x), validation_out_m$y))
     states_mesa[[m]] <- as.array(mesa_model$state_dict()$mesa_parameter)
 }
 
