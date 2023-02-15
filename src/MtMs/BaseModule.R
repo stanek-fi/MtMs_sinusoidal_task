@@ -41,7 +41,6 @@ BaseModule <- nn_module(
     },
     forward = function(x, base_state_diff, ...) {
         base_state_init <- torch_tensor(self$base_state_init)
-        base_state_init <- self$base_state_init
         base_state <- base_state_init + base_state_diff
         base_state <- self$unvectorize_state(base_state, self$state_structure)
         y <- self$fforward(x, base_state, ...)
